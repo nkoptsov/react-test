@@ -1,48 +1,93 @@
 import React from 'react';
 
-class Main extends  React.Component {
-    render() {
-        return (
-          <form>
-            <div className="form-group">
-            <label  for="login">Login</label>
-            <input type="text" id="login" name="login" placeholder="login"/>
-            </div>
-            <label  for="firstName">FirstName</label>
-            <input type="text" id="firstName" name="firstName" placeholder="firstName"/>
-            
-            <label  for="lastName">LastName</label>
-            <input type="text" id="lastName" name="lastName" placeholder="lastName"/>
+class Main extends React.Component {
+  constructor() {
+    super();
+    this.props = {
+      firstName: 'nik',
+      lastName: 'nik',
+    };
+  }
 
-            <label  for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="email"/>
+  render() {
+    return (
+      <form>
+        <div className="form-group">
+          <label>
+            Login:
+            <input
+              type="text"
+              id="login"
+              name="login"
+              placeholder="login"
+              value={this.props.firstName}
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <label>
+            FirstName:
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="firstName"
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <label>
+            LastName:
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="lastName"
+            />
+          </label>
+        </div>
+        <div className="form-group">
+          <label>
+            Email:
+            <input type="email" id="email" name="email" placeholder="email" />
+          </label>
+        </div>
+        <label>
+          PhoneNumber:
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="phoneNumber"
+          />
+        </label>
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="city" />
 
-            <label  for="phoneNumber">PhoneNumber</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="phoneNumber"/>
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" placeholder="country" />
 
-            <label  for="city">City</label>
-            <input type="text" id="city" name="city" placeholder="city"/>
+        <label for="gender">Gender</label>
+        <input type="text" id="gender" name="gender" placeholder="gender" />
 
-            <label  for="country">Country</label>
-            <input type="text" id="country" name="country" placeholder="country"/>
+        <label for="birthday">Birthday</label>
+        <input
+          type="text"
+          id="birthday"
+          name="birthday"
+          placeholder="birthday"
+        />
 
-            <label  for="gender">Gender</label>
-            <input type="text" id="gender" name="gender" placeholder="gender"/>
+        <label for="photo">Photo</label>
+        <input type="text" id="photo" name="photo" placeholder="photo" />
 
-            <label  for="birthday">Birthday</label>
-            <input type="text" id="birthday" name="birthday" placeholder="birthday"/>
+        <label for="about">About</label>
+        <input type="text" id="about" name="about" placeholder="about" />
 
-            <label  for="photo">Photo</label>
-            <input type="text" id="photo" name="photo" placeholder="photo"/>
-
-            <label  for="about">About</label>
-            <input type="text" id="about" name="about" placeholder="about"/>
-
-            <input type="submit"  name="submit" value="submit"/>
-
-          </form>
-        );
-      }
+        <input type="submit" name="submit" value="submit" />
+      </form>
+    );
+  }
 }
 
-export default Main
+export default Main;
